@@ -34,7 +34,7 @@
 						</view>
 					</view>
 					<!-- 按钮 -->
-					<view class="lottery-button" @click="startLottery">摸一摸</view>
+					<view class="lottery-button" @click="startLottery"><font>摸一摸</font></view>
 				</view>
 			</view>
 		</view>
@@ -246,14 +246,28 @@
 				
 				/* 抽奖按钮 */
 				.lottery-button {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					
+					background-image: url("@/static/images/common/lottery_button.png");
+					background-repeat: round;
+					width: 100px;
+					padding: 5px 0px;
 					margin-top: 100rpx;
-					padding: 15rpx 50rpx;
-					background-color: #413430;
-					color: #fff;
-					font-size: 28rpx;
-					border-radius: 40rpx;
-					text-align: center;
-					box-shadow: 0 4rpx 6rpx rgba(0, 0, 0, 0.3);
+
+					font {
+						font-family: heiTi;
+						font-weight: bold;
+						font-size: 15;
+						text-align: center;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						textShadow: 0px 0px 7px rgba(52, 255, 204, 0.1);
+						background-image: -webkit-linear-gradient(top, #aca08d,#f3f1f4,#b9b196);	
+						margin: 10rpx;
+					}
 				}
 			}
 		}
