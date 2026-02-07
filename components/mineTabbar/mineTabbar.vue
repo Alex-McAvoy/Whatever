@@ -59,7 +59,6 @@
 		},
 		methods: {
 			change(index) {
-				console.log(index)
 				uni.switchTab({
 					url: '/' + this.list[index].pagePath
 				})
