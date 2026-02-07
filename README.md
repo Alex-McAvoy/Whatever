@@ -85,13 +85,28 @@ cd ./Whatever
 npm i
 ```
 
-### 文件目录说明
+### 项目目录说明
 
 ```
 filetree 
+├── /api/
+├── /components/
 ├── /images/
+├── /pages/
+├── /static/
+├── /uni_modules/
 ├── .gitignore
-└── README.md
+├── App.vue
+├── LICENSE
+├── README.md
+├── config.js
+├── index.html
+├── main.js
+├── manifest.json
+├── package.json
+├── pages.json
+├── uni.promisify.adaptor.js
+└── uni.scss
 
 ```
 
