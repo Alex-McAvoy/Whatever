@@ -39,7 +39,7 @@
 						customIcon: false,
 					},
 					{
-						pagePath: "pages/archive/index",
+						pagePath: "pages/prize/index",
 						text: "奖池",
 						iconPath: "photo",
 						selectedIconPath: "photo-fill",
