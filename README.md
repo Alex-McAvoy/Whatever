@@ -57,11 +57,10 @@
 ## 效果展示
 
 <p align="center">
-  <img src="images/1.jpg" alt="1.jpg" height="300">
-  <img src="images/2.jpg" alt="2.jpg" height="300">
-  <img src="images/3.jpg" alt="3.jpg" height="300">
-  <img src="images/4.jpg" alt="4.jpg" height="300">
-  <img src="images/5.jpg" alt="5.jpg" height="300">
+  <img src="images/1.png" alt="1.png" height="300">
+  <img src="images/2.png" alt="2.png" height="300">
+  <img src="images/3.png" alt="3.png" height="300">
+  <img src="images/4.png" alt="4.png" height="300">
 </p>
 
 
@@ -104,6 +103,16 @@ filetree
 
 - [uniapp](https://uniapp.dcloud.net.cn/)
 - [uView 2.0.36](https://uviewui.com/components/intro.html)
+
+## 待处理
+
+### 新特性
+
+- [ ] 更新素材
+
+### Bug
+
+暂未发现
 
 ## 参与项目
 
