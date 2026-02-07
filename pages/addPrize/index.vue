@@ -109,8 +109,7 @@
 				// 新数据
 				const newItem = {
 					id: newId,
-					name: name,
-					createTime: Date.now()
+					name: name
 				};
 
 				// 追加
