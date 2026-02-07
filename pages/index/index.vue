@@ -5,9 +5,7 @@
 -->
 <template>
 	<view class="main">
-		<u-sticky>
-			<page-search></page-search>
-		</u-sticky>
+		<page-search></page-search>
 		<view class="container">
 			<view class="images-container" v-for="item in images">
 				<view class="image-container" @click="handleBuilding(item.index)">
@@ -57,6 +55,7 @@
 </script>
 
 <style lang="scss" scoped>
+.main{
 	.container {
 		margin-top: 80px;
 
@@ -94,6 +93,6 @@
 				}
 			}
 		}
-
 	}
+}
 </style>
