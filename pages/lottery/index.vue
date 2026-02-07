@@ -5,47 +5,33 @@
 -->
 <template>
 	<view class="main">
-		<!-- 导航栏 -->
 		<mine-navbar :title="navbarTitle"></mine-navbar>
-		<!-- 容器 -->
 		<view class="container">
-			<!-- 背景 -->
 			<view class="bg">
-				<!-- 标题容器 -->
 				<view class="title-container">
-					<!-- 标题 -->
 					<view class="title">吃啥？</view>
 				</view>
-								
-				<!-- 分隔 -->
 				<image class="divide" :src="divideImgSrc" mode="widthFix"></image>
-
-				<!-- 摸奖容器 -->
 				<view class="lottery-container">
-					<!-- 奖品列表wrapper -->
 					 <view class="prize-list-wrapper">
-						<!-- 奖品列表 -->
 						<view class="prize-list">
-						<!-- <view class="prize-list" :style="{ transform: `translateY(${translateY}px)`, transition: transitionStyle }"> -->
-							<!-- 奖品项 -->
+							<view v-if="!isData" class="empty">
+								<text>暂无数据，请添加！</text>
+							</view>
 							<view class="prize-item" v-for="(item, index) in displayList" :key="index" :style="getItemStyle(index)">
 								{{ item }}
 							</view>
 						</view>
 					</view>
-					<!-- 按钮 -->
-					<view class="lottery-button" @click="startLottery"><font>摸一摸</font></view>
+					<view v-if="isData" class="lottery-button" @click="startLottery"><font>摸一摸</font></view>
 				</view>
 			</view>
 		</view>
-		<!-- 底部导航栏 -->
 		<mine-tabbar :current="-1"></mine-tabbar>
 	</view>
 </template>
 
 <script>
-import { created } from 'uview-ui/libs/mixin/mixin';
-
 	export default {
 		data() {
 			return {
@@ -82,10 +68,7 @@ import { created } from 'uview-ui/libs/mixin/mixin';
 			const data = uni.getStorageSync(storageKey)
 			if (!data) {
 				this.isData = false;
-				return uni.showToast({
-					"title": "无数据，请添加！",
-					icon: "none"
-				});
+				return;
 			}
 			this.isData = true;
 			this.prizeList = data.map(item => item.name);
@@ -253,6 +236,17 @@ import { created } from 'uview-ui/libs/mixin/mixin';
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+
+					.empty {
+						text-align: center;
+						font-family: heiTi;
+						font-size: 32rpx;
+						font-weight: 600;
+						color: #1e1b1b;
+						letter-spacing: 2rpx;
+						padding-top: 100rpx;
+						font-size: 28rpx;
+					}
 
 					/* 奖品列表 */
 					.prize-list {
