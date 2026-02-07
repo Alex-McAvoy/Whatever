@@ -58,7 +58,7 @@
 <style lang="scss" scoped>
 	.search-bar {		
 		padding: 20px 30px 20px 30px;
-		background-image: url("@/static/images/common/search/bg.png");
+		background-image: url("@/static/images/search/bg.png");
 		background-position: center center;
 		background-size: cover;
 	}

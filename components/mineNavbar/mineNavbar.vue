@@ -8,7 +8,7 @@
 		<u-navbar :title="title" height="44" :autoBack="true" :placeholder="true" :bgColor="navbarVar.bgColor"
 			:titleStyle="navbarVar.titleStyle">
 			<view class="u-nav-slot" slot="left">
-				<u-icon name="/static/images/common/narbar/arrow.png" size="20"></u-icon>
+				<u-icon name="/static/images/narbar/arrow.png" size="20"></u-icon>
 			</view>
 		</u-navbar>
 	</view>
