@@ -56,24 +56,7 @@
 </script>
 
 <style lang="scss" scoped>
-	// .search-bar {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	padding: 20px 30px 20px 30px;
-	// 	background-image: url("@/static/images/common/search/bg.png");
-	// 	background-position: center center;
-	// 	background-size: cover;
-	// 	margin-left: 0px;
-	// 	margin-right: 0px;
-	// }
-
-	.search-bar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 999;
-		
+	.search-bar {		
 		padding: 20px 30px 20px 30px;
 		background-image: url("@/static/images/common/search/bg.png");
 		background-position: center center;
