@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import { created } from 'uview-ui/libs/mixin/mixin';
+
 	export default {
 		data() {
 			return {
@@ -52,7 +54,7 @@
 				// 分隔图
 				divideImgSrc: "/static/images/common/divide.png",
 				// 奖品列表
-				prizeList: ["拉面", "火锅", "烧烤", "寿司", "汉堡", "披萨", "烤串", "煎饼", "蛋糕", "奶茶"],
+				prizeList: [],
 				// 可见奖品数量
 				visibleCount: 9,
 				// 当前显示的奖品
@@ -62,7 +64,9 @@
 				// 是否正在滚动
 				rotating: false,
 				// 当前prizeList的起始索引
-				startIndex: 0
+				startIndex: 0,
+				// 是否有数据
+				isData: true
 			};
 		},
 		onLoad(option) {
@@ -73,8 +77,22 @@
 			} else if (index == 1) {
 				this.navbarTitle = "每周一摸";
 			}
+			// 读取数据
+			const storageKey = index == 0 ? "daily" : "weekly";
+			const data = uni.getStorageSync(storageKey)
+			if (!data) {
+				this.isData = false;
+				return uni.showToast({
+					"title": "无数据，请添加！",
+					icon: "none"
+				});
+			}
+			this.isData = true;
+			this.prizeList = data.map(item => item.name);
 			// 初始化displayList
 			this.updateDisplayList()
+		},
+		created() {
 		},
 		methods: {
 			updateDisplayList() {
@@ -106,6 +124,13 @@
 				};
 			},
 			startLottery() {
+				// 若无数据，点击失效
+				if (!this.isData) {
+					return uni.showToast({
+						"title": "无数据，请添加！",
+						icon: "none"
+					});
+				}
 				// 若正在滚动，点击失效
 				if (this.rotating) return;
 				this.rotating = true;
