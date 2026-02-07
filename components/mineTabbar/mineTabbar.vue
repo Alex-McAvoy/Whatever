@@ -47,7 +47,7 @@
 						customIcon: false,
 					},
 					{
-						pagePath: "pages/mine/index",
+						pagePath: "pages/addPrize/index",
 						text: "奖池扩充",
 						iconPath: "account",
 						selectedIconPath: "account-fill",
