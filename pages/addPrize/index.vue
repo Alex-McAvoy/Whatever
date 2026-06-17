@@ -5,7 +5,7 @@
 -->
 <template>
 	<view class="main">
-		<page-search></page-search>
+		<page-header title="扩充奖池" subtitle="把想吃的先放进来"></page-header>
 		<view class="container">
 			<view class="bg">
 				<view class="content-container">
