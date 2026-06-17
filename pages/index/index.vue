@@ -26,11 +26,11 @@
 			return {
 				images: [{
 					index: 0,
-					imgSrc: "/static/images/common/index_yiDong.png",
+					imgSrc: "/static/images/common/index_daily.png",
 					title: "日常摸奖"
 				}, {
 					index: 1,
-					imgSrc: "/static/images/common/index_shiZhouNian.png",
+					imgSrc: "/static/images/common/index_weekly.png",
 					title: "每周一摸"
 				}]
 			}
