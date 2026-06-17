@@ -55,8 +55,16 @@
 
 <style lang="scss" scoped>
 .main{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
 	.container {
-		padding-top: 24rpx;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+		padding: 24rpx 0 120rpx;
 
 		.images-container {
 			display: flex;
