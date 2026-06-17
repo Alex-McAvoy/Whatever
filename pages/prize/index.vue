@@ -5,7 +5,6 @@
 -->
 <template>
 	<view class="main">
-		<page-header title="我的奖池" subtitle="日常和每周的选择都在这里"></page-header>
 		<view class="container">
 			<view class="bg">
 				<view class="content-container">

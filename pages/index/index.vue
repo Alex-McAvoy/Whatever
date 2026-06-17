@@ -5,7 +5,6 @@
 -->
 <template>
 	<view class="main">
-		<page-header title="吃啥？随便" subtitle="今天吃什么，摸一下就知道"></page-header>
 		<view class="container">
 			<view class="images-container" v-for="item in images">
 				<view class="image-container" @click="handleBuilding(item.index)">
@@ -57,7 +56,7 @@
 <style lang="scss" scoped>
 .main{
 	.container {
-		margin-top: 80px;
+		padding-top: 24rpx;
 
 		.images-container {
 			display: flex;

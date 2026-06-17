@@ -5,12 +5,10 @@ import uView from "uview-ui";
 import Vue from 'vue'
 import './uni.promisify.adaptor'
 
-import pageHeader from '@/components/pageHeader/pageHeader.vue'
 import mineNavbar from '@/components/mineNavbar/mineNavbar.vue'
 import mineTabbar from '@/components/mineTabbar/mineTabbar.vue'
 
 Vue.use(uView);
-Vue.component('page-header', pageHeader);
 Vue.component('mine-navbar', mineNavbar);
 Vue.component('mine-tabbar', mineTabbar);
 Vue.config.productionTip = false
