@@ -75,8 +75,6 @@
 			// 初始化displayList
 			this.updateDisplayList()
 		},
-		created() {
-		},
 		methods: {
 			updateDisplayList() {
 				// 仅展示visibleCount个

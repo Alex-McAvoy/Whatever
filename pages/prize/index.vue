@@ -54,12 +54,6 @@
 					fontWeight: "600",
 					transform: "scale(1.3)",
 				},
-				// 标签栏未选中样式
-				tabsInactive: {
-					padding: "10rpx",
-					fontSize: "30rpx",
-					fontWeight: "600",
-				},
 				// 标签索引
 				tabsIndex: 0,
 				// 是否有数据
